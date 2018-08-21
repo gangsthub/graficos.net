@@ -1,0 +1,8 @@
+// https://fonts.googleapis.com/css?family=Kanit:100&text=GRAFICOS.net
+// kanit thin 100
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Kanit Thin'), local('Kanit-Thin'), url(https://fonts.gstatic.com/l/font?kit=XnyF0dmgYU8GFYUyjKd-iAfOj3guGEikCoGH82T0eDQ&skey=1fafa5416853f7e5&v=v1) format('woff2');
+}
