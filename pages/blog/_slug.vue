@@ -7,9 +7,13 @@
       <div class="container my-auto">
         <h1 class="mb-8 text-white">{{ post.title }}</h1>
         <p class="text-white">
-          <the-time :date="post.date"></the-time> {{ '·' }}
-          <span>{{ cupsWhileReading }}️</span>
-          <span>{{ minutesToRead }} mins read</span>
+          <the-time :date="post.date"></the-time>
+
+          <span class="sm:block">
+            <span class="sm:invisible">{{ '·' }}</span>
+            {{ cupsWhileReading }}️
+            {{ minutesToRead }} mins read
+          </span>
         </p>
       </div>
     </header>
