@@ -6,10 +6,10 @@
     >
       <div class="container my-auto">
         <h1 class="mb-8 text-white">{{ post.title }}</h1>
-        <p class="text-white">
+        <p class="text-white flex sm:flex-col ">
           <the-time :date="post.date"></the-time>
-
-          <span class="sm:block">
+          {{ ' ' }}
+          <span>
             <span class="sm:invisible">{{ '·' }}</span>
             {{ cupsWhileReading }}️
             {{ minutesToRead }} mins read
