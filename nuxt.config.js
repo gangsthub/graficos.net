@@ -151,7 +151,7 @@ module.exports = {
             APP_NAME,
             pkg.description,
             APP_URL + APP_COVER_IMG,
-            'Graficos.net',
+            APP_NAME,
           )
         )
       },
