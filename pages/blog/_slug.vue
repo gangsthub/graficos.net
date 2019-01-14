@@ -1,8 +1,12 @@
 <template>
-  <article>
+  <article class="overflow-hidden relative">
+    <div
+      class="py-16 bg-image z-1 relative bg-cover bg-center min-h-50 absolute overflow-hidden"
+      v-lazy:background-image="post.thumbnail"
+      aria-hidden="true"
+    ></div>
     <header
-      class="py-16 bg-image bg-center bg-cover min-h-50 flex-col flex content-center"
-      :style="`background-image: url( ${ post.thumbnail } )`"
+      class="py-16 min-h-50 flex-col flex content-center absolute pin-t pin-l pin-r z-1 overflow-hidden"
     >
       <div class="max-w-3/4 sm:max-w-1/2 my-auto mx-auto">
         <h1 class="mb-8 text-white sm:text-5xl">{{ post.title }}</h1>
@@ -116,11 +120,14 @@ export default {
 
 <style scoped>
 .bg-image {
-  @apply z-1 relative;
+  transition: filter .3s ease-out;
   &:after {
     content: '';
     @apply pin absolute bg-black opacity-50;
     z-index: -1;
   }
+}
+.bg-image[lazy='loading'] {
+    filter: blur(5px);
 }
 </style>

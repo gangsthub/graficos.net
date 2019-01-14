@@ -4,6 +4,7 @@ module.exports = {
   // order of requires is important!
   plugins: [
     require('postcss-import'),
+    require('postcss-custom-properties'),
     require('postcss-preset-env')({
       stage: 0
     }),

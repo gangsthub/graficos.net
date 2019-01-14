@@ -101,7 +101,7 @@ export default {
     ** Build configuration
     */
   plugins: [
-    // '~/plugins/prism',
+    '~/plugins/lazy-load',
   ],
   modules: [
     ['@nuxtjs/axios'],
@@ -166,6 +166,10 @@ export default {
     generate: true,
   },
   build: {
+    analyze: true,
+    analyze: {
+      analyzerMode: 'static'
+    },
     extractCSS: true,
     /*
     ** You can extend webpack config here
