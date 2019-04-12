@@ -17,7 +17,7 @@ const THEME_COLOR = tailwindConfig.colors['teal-light']
 
 const FEED_FILE_NAME = 'feed.xml'
 const AUTHOR = '@paul_melero'
-const AUTHOR_EMAIL = 'paulmelero@gmail.com'
+const AUTHOR_EMAIL = 'paul' + '@graficos' + '.' + 'net'
 
 const blogPostRoutes  = getRoutesFromPosts({
   '/blog': 'blog/posts/*.json'
@@ -109,10 +109,10 @@ export default {
     // '~/plugins/prism',
   ],
   modules: [
-    ['@nuxtjs/axios'],
-    ['nuxt-purgecss'],
-    ['@nuxtjs/feed'],
-    ['@nuxtjs/sitemap'],
+    '@nuxtjs/axios',
+    'nuxt-purgecss',
+    '@nuxtjs/feed',
+    '@nuxtjs/sitemap',
     ...envDependantModules,
   ],
   /*
@@ -155,7 +155,7 @@ export default {
             APP_NAME,
             pkg.description,
             APP_URL + APP_COVER_IMG,
-            'Graficos.net',
+            APP_NAME,
           )
         )
       },
@@ -172,9 +172,6 @@ export default {
   },
   build: {
     analyze: !isProd,
-    analyze: {
-      analyzerMode: 'static'
-    },
     extractCSS: true,
     /*
     ** You can extend webpack config here
