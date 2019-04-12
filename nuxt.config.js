@@ -213,7 +213,7 @@ export default {
   },
 }
 /**
- * Return an path from glob
+ * Return a path from glob
  * @param {*} urlFilepathTable
  */
 function getPathFromGlob(urlFilepathTable) {
