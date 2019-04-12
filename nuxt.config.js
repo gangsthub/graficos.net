@@ -6,9 +6,10 @@ import pkg from './package'
 import tailwindConfig from './tailwind.config'
 
 import socialLinks from './assets/social-links'
+import tailwindJS from './tailwind.config'
 
 import createRSSFeed from './core/createRSSFeed'
-import { webapackGetPosts, getTagsFromPosts } from './core/posts'
+import { getTagsFromPosts } from './core/posts'
 
 const APP_NAME = 'Graficos.net'
 const APP_URL = 'https://graficos.net' // do not end it in slash
@@ -173,6 +174,26 @@ export default {
   build: {
     analyze: !isProd,
     extractCSS: true,
+    postcss: {
+      // order of requires is important!
+      plugins: [
+        require('postcss-import'),
+        require('postcss-preset-env')({
+          stage: 0
+        }),
+        require('postcss-url'),
+        require('tailwindcss')(tailwindJS),
+        require('autoprefixer')({
+          cascade: false,
+          grid: true
+        }),
+        require('cssnano')({
+          preset: 'default',
+          discardComments: { removeAll: true },
+          zindex: false
+        }),
+      ],
+    },
     /*
     ** You can extend webpack config here
     */
