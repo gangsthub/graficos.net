@@ -213,31 +213,33 @@ export default {
   },
 }
 /**
- * Create an array of URLs from a list of files
+ * Return an path from glob
  * @param {*} urlFilepathTable
  */
-function getRoutesFromPosts(urlFilepathTable) {
+function getPathFromGlob(urlFilepathTable) {
   return [].concat(
     ...Object.keys(urlFilepathTable).map(url => {
       var filepathGlob = urlFilepathTable[url];
       return globAll
         .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
     })
   );
 }
+/**
+ * Create an array of URLs from a list of files
+ * @param {*} urlFilepathTable
+ */
+function getRoutesFromPosts(urlFilepathTable) {
+  return getPathFromGlob(urlFilepathTable)
+        .map(articlePath => `/blog/${path.basename(articlePath, '.json')}`);
+}
+
 
 function getRoutesFromPostTags(urlFilepathTable) {
-  const tags = [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url];
-      return globAll
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(article => require(`./content/${article}`))
-        .map(article => getTagsFromPosts([article]))
-        .map(Object.keys)
-        .reduce((acc, arr) => [...acc, ...arr], []) // flat
-    })
-  );
+  const tags = getPathFromGlob(urlFilepathTable)
+      .map(articlePath => require(`./content/${articlePath}`))
+      .map(article => getTagsFromPosts([article]))
+      .map(Object.keys)
+      .reduce((acc, arr) => [...acc, ...arr], []) // flatten
   return tags.map(tagName => `/blog/tag/${tagName}`)
 }
