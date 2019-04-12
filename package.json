@@ -21,8 +21,10 @@
     "feed": "^2.0.2",
     "md": "^0.6.0",
     "nuxt": "^2.0.0",
-    "prismjs": "^1.15.0"
+    "nuxt-purgecss": "0.0.2",
+    "prismjs": "^1.15.0",
     "glob-all": "^3.1.0",
+    "tailwindcss": "^0.6.6"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.1",
@@ -32,11 +34,9 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-vue": "^4.7.1",
-    "nuxt-purgecss": "0.0.2",
     "postcss-import": "^12.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^5.3.0",
     "postcss-url": "^8.0.0",
-    "tailwindcss": "^0.6.6"
   }
 }
