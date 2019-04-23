@@ -33,7 +33,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const envDependantModules =
   isProd ?
     [
-      ['@nuxtjs/pwa', { oneSignal: false }]
+      '@nuxtjs/pwa'
     ] :
       [];
 
@@ -116,6 +116,7 @@ export default {
     '@nuxtjs/sitemap',
     ...envDependantModules,
   ],
+  oneSignal: false,
   /*
   ** @nuxt/axios module configuration
   */
