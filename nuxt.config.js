@@ -140,7 +140,7 @@ export default {
   },
   manifest: {
     start_url: "/",
-  }
+  },
   /*
   ** @nuxt/feed module configuration
   */
