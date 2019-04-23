@@ -137,7 +137,7 @@ export default {
   ** @nuxt/pwa module configuration
   */
   workbox: {
-    offlineAssets: ['/logo/graficos.svg']
+    offlineAssets: ['/logo/graficos.svg', '/avatar.jpg']
   },
   /*
   ** @nuxt/feed module configuration
