@@ -139,6 +139,9 @@ export default {
   workbox: {
     offlineAssets: ['/logo/graficos.svg', '/avatar.jpg']
   },
+  manifest: {
+    start_url: "/",
+  }
   /*
   ** @nuxt/feed module configuration
   */
