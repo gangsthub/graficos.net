@@ -174,7 +174,6 @@ export default {
   },
   build: {
     analyze: !isProd,
-    extractCSS: true,
     postcss: {
       // order of requires is important!
       plugins: [
