@@ -4,7 +4,7 @@
       <h1 slot="title" class="text-3xl">{{ title }}</h1>
       <p slot="subtitle">Or drop me a line at:
         <a
-          :href="'mailto:paulm&#101;l&#101;&#114;o&#64;gm' + 'ail&#46;c%6Fm'"
+          href="'mailto:paulmelero@gmail.com"
         >pau&#108;&#109;&#101;lero [a&#116;] gm&#97;i&#108; &#91;dot&#93; &#99;&#111;m</a>
       </p>
     </the-title>
