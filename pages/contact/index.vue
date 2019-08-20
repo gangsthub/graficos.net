@@ -4,8 +4,10 @@
       <h1 slot="title" class="text-3xl">{{ title }}</h1>
       <p slot="subtitle">Or drop me a line at:
         <a
-          href="mailto:paulmelero@gmail.com"
-        >pau&#108;&#109;&#101;lero [a&#116;] gm&#97;i&#108; &#91;dot&#93; &#99;&#111;m</a>
+          :href="
+            'mai' + 'lto:paulmelero@gmail.com?subject=[Graficos.net] Mail from Contact page'
+          "
+        >paulmelero(at)gmail(dot)com</a>
       </p>
     </the-title>
     <form
