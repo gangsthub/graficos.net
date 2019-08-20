@@ -5,9 +5,9 @@
       <p slot="subtitle">Or drop me a line at:
         <a
           :href="
-            'mai' + 'lto:paulmelero@gmail.com?subject=[Graficos.net] Mail from Contact page'
+            'mai' + 'lto:paulmelero' + '@' + 'g' + 'mai' + 'l' + '.' + 'com'
           "
-        >paulmelero(at)gmail(dot)com</a>
+        >{{ 'paulmelero' + '(at)gm' + 'ail(dot)com' }}</a>
       </p>
     </the-title>
     <form
